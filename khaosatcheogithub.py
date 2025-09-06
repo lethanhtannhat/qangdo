@@ -482,7 +482,7 @@ luoitracnghiem7(row[32],row[33],row[34],row[35])
 next_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="next-button"]')))
 driver.execute_script("arguments[0].click();", next_button)
 time.sleep(2)
-tracnghiem(row[36],1,3)
+tracnghiem(row[36],1,6)
 tracnghiem(row[37],2,4)
 hopkiem3(row[38],row[38],row[38],row[38],row[38],row[38])
 time.sleep(random.randint(300,420))
@@ -493,4 +493,5 @@ with open("index.txt", "w") as f:
     f.write(str(index + 1))
      
 driver.close()
+
 
