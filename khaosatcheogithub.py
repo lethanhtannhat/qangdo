@@ -453,6 +453,7 @@ with open("test.csv", encoding="utf-8-sig") as file:
 
 time.sleep(1)
 driver.get('https://docs.google.com/forms/d/e/1FAIpQLSdhuyWmD1ypus3XwRq46GUw5iZrSQGjy_pp5TnNTVtpdAg_uA/viewform')
+time.sleep(1)
 next_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div')))
 driver.execute_script("arguments[0].click();", next_button)
 time.sleep(1)
@@ -488,6 +489,7 @@ with open("index.txt", "w") as f:
     f.write(str(index + 1))
      
 driver.close()
+
 
 
 
