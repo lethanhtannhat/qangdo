@@ -453,18 +453,14 @@ with open("test.csv", encoding="utf-8-sig") as file:
 
 time.sleep(1)
 driver.get('https://docs.google.com/forms/d/e/1FAIpQLSdhuyWmD1ypus3XwRq46GUw5iZrSQGjy_pp5TnNTVtpdAg_uA/viewform')
-time.sleep(1)
 next_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div')))
 driver.execute_script("arguments[0].click();", next_button)
-time.sleep(1)
 tracnghiem(row[0],1,2)
 submit_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div[2]')))
 driver.execute_script("arguments[0].click();", submit_button)
-time.sleep(1)
 tracnghiem(row[1],1,2)
 submit_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div[2]')))
 driver.execute_script("arguments[0].click();", submit_button)
-time.sleep(1)
 luoitracnghiem(row[2],row[3],row[4],row[5],row[6],stt=1,colums=5)
 luoitracnghiem(row[7],row[8],row[9],row[10],row[11],row[12],stt=2,colums=5)
 luoitracnghiem(row[13],row[14],row[15],row[16],row[17],stt=3,colums=5)
@@ -484,11 +480,11 @@ time.sleep(0.2)
 submit_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div[2]')))
 driver.execute_script("arguments[0].click();", submit_button)
 time.sleep(0.6)
-time.sleep(2)
 with open("index.txt", "w") as f:
     f.write(str(index + 1))
      
 driver.close()
+
 
 
 
